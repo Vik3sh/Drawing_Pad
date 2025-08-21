@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drawing Tool</title>
+    <style>
+        #canvas{
+            background-color: white;
+            border: 2px dashed gray;
+            cursor: crosshair;
+            display: block;
+            ;
+        }
+        #color, #rangeSelect, #clear {
+             margin: 5px;
+             padding: 5px;
+             font-size: 16px;
+        }
+        #container{
+            display: inline-block;
+            padding: 20px;
+            margin: 20px auto;
+            border: 3px groove black;
+            border-radius: 5px;
+            background-color: burlywood;
+            
+        }
+        #clear{
+            position: relative;
+            top: 20px;
+        }
+
+                
+    </style>
+</head>
+<body>
+   <div id="container">
+     <h1>SVG Drawing Tool</h1>
+    <div>
+        <label>
+            Brush-Color:
+            <input id="color"  type="color">
+        </label>
+        <label for="range">
+            Brush-Size:
+            <input type="range" id="rangeSelect" value="2">
+        </label>
+        
+        <img id="clear" src="4203899.png" alt="Clear Canvas" width="40" height="40" style="cursor:pointer;">
+
+        <div id="undo-redo">
+            <button id="undo">undo</button>
+            <button id="redo">redo</button>
+        </div>
+    </div>
+
+    <canvas id="canvas" height="500px" width="800px"></canvas>
+    <div>
+        <button id="save">Save</button>
+    </div>
+    
+   </div>
+
+
+
+
+    <script src="script.js"></script>
+</body>
+</html>
